@@ -5,6 +5,11 @@ body {
   background-color: #f1f3f5;
   color: #333;
   text-align: center;
+  /* Menambahkan ini agar konten utama (mode-selector, game-board) bisa di-center secara vertikal jika perlu */
+  display: flex;
+  flex-direction: column; /* Mengatur arah flex ke kolom */
+  align-items: center; /* Memusatkan item secara horizontal */
+  min-height: 100vh; /* Memastikan body mengisi seluruh tinggi viewport */
 }
 
 h1 {
@@ -22,7 +27,17 @@ h1 {
 
 #mode-selector {
   margin-top: 40px;
+  /* Menambahkan display flex agar tombol-tombolnya berbaris rapi */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Agar tombol bisa wrap jika layar kecil */
+  padding: 10px; /* Sedikit padding */
+  background-color: #ffffff; /* Latar belakang untuk mode selector */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
+
 
 #mode-selector button,
 #end-game-btn {
@@ -43,21 +58,30 @@ h1 {
 }
 
 #game-board {
-  display: flex;
+  display: flex; /* Menggunakan Flexbox untuk mensejajarkan kolom */
   justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  align-items: flex-start; /* Sejajarkan item dari atas */
+  flex-wrap: wrap; /* Izinkan wrapping jika layar kecil */
   margin: 30px auto;
   max-width: 1000px;
-  gap: 20px;
+  gap: 20px; /* Jarak antara kolom nama dan kolom foto */
+  padding: 20px; /* Padding di sekitar board */
+  background-color: #ffffff; /* Latar belakang untuk game board */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .column {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  flex-direction: column; /* Item dalam kolom akan berbaris ke bawah */
+  gap: 15px; /* Jarak antar item dalam satu kolom */
   flex: 1;
-  min-width: 300px;
+  min-width: 250px; /* Beri lebar minimum agar tidak terlalu sempit */
+  max-width: 45%; /* Batasi lebar kolom agar tidak terlalu lebar di layar besar */
+  padding: 10px;
+  border: 1px solid #e0e0e0; /* Border ringan */
+  border-radius: 8px;
+  background-color: #fcfcfc; /* Latar belakang kolom */
 }
 
 .item {
@@ -67,7 +91,17 @@ h1 {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.2s ease;
-  font-size: 1em;
+  font-size: 1.1em; /* Ukuran font lebih besar */
+  font-weight: bold;
+  color: #555;
+  text-align: center; /* Pastikan teks di tengah */
+  word-break: break-word; /* Mencegah teks panjang meluap */
+  
+  /* Flexbox untuk konten dalam item (untuk mensejajarkan teks/gambar) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px; /* Tinggi minimum yang seragam untuk semua item */
 }
 
 .item:hover {
@@ -78,56 +112,124 @@ h1 {
 .item.selected {
   border: 2px solid #00b4d8;
   background-color: #caf0f8;
+  box-shadow: 0 0 12px rgba(0, 180, 216, 0.6); /* Efek bayangan lebih menonjol */
 }
 
 .item.matched {
   background-color: #90e0ef;
   border: 2px solid #00b4d8;
   cursor: default;
-  pointer-events: none;
+  pointer-events: none; /* Nonaktifkan klik setelah cocok */
+  box-shadow: 0 0 12px rgba(144, 224, 239, 0.6); /* Efek bayangan untuk matched */
+  opacity: 0.7; /* Sedikit transparan agar terlihat berbeda */
 }
 
 .item img {
   max-width: 100%;
+  max-height: 100px; /* Batasi tinggi gambar */
   height: auto;
-  border-radius: 10px;
-  object-fit: cover;
+  border-radius: 8px; /* Lebih halus dari 10px */
+  object-fit: contain; /* Memastikan gambar sepenuhnya terlihat tanpa terpotong */
+  display: block; /* Hapus spasi ekstra di bawah gambar */
 }
 
 .image-placeholder {
   color: #888;
   font-style: italic;
+  /* Sesuaikan placeholder agar mengisi ruang dengan baik */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box; /* Pastikan padding dihitung dalam lebar/tinggi */
+  text-align: center;
+  padding: 10px; /* Padding untuk teks placeholder */
+  background-color: #f8f9fa;
+  border: 1px dashed #ced4da;
+  border-radius: 8px;
 }
 
 @media screen and (max-width: 768px) {
   #game-board {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Kolom akan menumpuk secara vertikal di layar kecil */
+    align-items: center; /* Pusatkan kolom di tengah */
+    gap: 15px; /* Jarak antar kolom saat menumpuk */
+    padding: 15px;
   }
 
   .column {
-    width: 90%;
+    width: 90%; /* Ambil lebar hampir penuh */
+    min-width: unset; /* Hapus min-width */
+    max-width: unset; /* Hapus max-width */
   }
 
+  .item {
+      min-height: 60px; /* Tinggi item lebih kecil di mobile */
+      padding: 10px;
+      font-size: 0.95em;
+  }
+}
+
+/* Styling untuk Modal (jika Anda akan menggunakannya untuk feedback) */
 .modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.6); /* Sedikit lebih gelap */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  z-index: 1000; /* Z-index lebih tinggi */
+  visibility: hidden; /* Sembunyikan secara default */
+  opacity: 0; /* Transparan secara default */
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+.modal.show {
+  visibility: visible;
+  opacity: 1;
 }
 
 .modal-content {
   background: white;
-  padding: 20px 30px;
-  border-radius: 10px;
-  max-width: 400px;
+  padding: 25px 35px; /* Padding lebih banyak */
+  border-radius: 12px; /* Sudut lebih melengkung */
+  max-width: 450px; /* Lebar maksimum lebih besar */
   text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2); /* Bayangan lebih dalam */
+  position: relative; /* Untuk posisi tombol close */
 }
-  
+
+.modal-content h2 {
+    color: #2b2d42;
+    margin-bottom: 15px;
+    font-size: 1.8em;
 }
+
+.modal-content p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    background-color: #0077b6;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+
+.modal-content button:hover {
+    background-color: #005f87;
+}
+
+/* Ini adalah penutup kurung kurawal yang berlebihan di akhir file Anda sebelumnya */
+/* @media screen and (max-width: 768px) { ... } */
+/* } <-- Ini dihapus */
