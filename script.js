@@ -454,16 +454,14 @@ let data = [
 
 let skor = 0;
 let mode = "";
-let selectedItem1 = null; // Mengganti selectedLeft menjadi selectedItem1
-let selectedItem2 = null; // Mengganti selectedRight menjadi selectedItem2
-let matchedPairs = []; // Untuk melacak pasangan yang sudah cocok
-let currentRoundData = []; // Mengganti currentSample
+let selectedItem1 = null;
+let selectedItem2 = null;
+let matchedPairsCount = 0; // Menghitung pasangan yang sudah ditemukan di ronde ini
+let currentRoundData = []; // Data untuk ronde saat ini (4 teman)
 
-// Langsung tampilkan mode selector karena data sudah tersedia
 document.addEventListener('DOMContentLoaded', function() {
   if (data.length > 0) {
     document.getElementById("mode-selector").style.display = "block";
-    // Sembunyikan game board di awal
     document.getElementById("game-board").style.display = "none";
   }
 });
@@ -476,24 +474,23 @@ function startGame(selectedMode) {
 
   mode = selectedMode;
   skor = 0;
-  matchedPairs = [];
+  matchedPairsCount = 0; // Reset count untuk game baru
   document.getElementById("score").innerText = "Skor: 0";
-  document.getElementById("mode-selector").style.display = "none"; // Sembunyikan selector mode
-  document.getElementById("game-board").style.display = "flex"; // Tampilkan game board
+  document.getElementById("mode-selector").style.display = "none";
+  document.getElementById("game-board").style.display = "flex";
   generateRound();
 }
 
 function generateRound() {
   const board = document.getElementById("game-board");
-  board.innerHTML = ""; // Bersihkan papan permainan
-  selectedItem1 = null; // Reset pilihan
-  selectedItem2 = null; // Reset pilihan
+  board.innerHTML = "";
+  selectedItem1 = null;
+  selectedItem2 = null;
+  matchedPairsCount = 0; // Reset count untuk ronde baru
 
-  // Ambil 4 data teman secara acak untuk round ini
-  // Filter data yang belum pernah dimainkan jika Anda ingin setiap NIM/Nama/Foto hanya muncul sekali
-  // Untuk kesederhanaan, kita akan ambil 4 acak dari seluruh data
-  const shuffledData = [...data].sort(() => 0.5 - Math.random());
-  currentRoundData = shuffledData.slice(0, 4);
+  // Ambil 4 data teman secara acak dari SELURUH data
+  const shuffledAllData = [...data].sort(() => 0.5 - Math.random());
+  currentRoundData = shuffledAllData.slice(0, 4); // Ambil 4 data pertama dari yang sudah diacak
 
   let gameElements = [];
 
@@ -524,10 +521,11 @@ function generateRound() {
 
   // Buat kolom kiri dan kanan
   const leftColumn = document.createElement("div");
-  leftColumn.className = "column left-column"; // Tambahkan class untuk styling
+  leftColumn.className = "column left-column";
   const rightColumn = document.createElement("div");
-  rightColumn.className = "column right-column"; // Tambahkan class untuk styling
+  rightColumn.className = "column right-column";
 
+  // Distribusikan elemen ke kolom berdasarkan type-nya
   gameElements.forEach(item => {
     const card = document.createElement("div");
     card.className = "item";
@@ -535,38 +533,28 @@ function generateRound() {
     card.dataset.type = item.type; // Simpan tipe (left/right)
 
     if (item.type === 'left') {
-        // Untuk kolom kiri, bisa nama atau NIM
         card.innerText = item.value;
     } else { // item.type === 'right'
-        // Untuk kolom kanan, bisa foto atau nama
         if (mode === "nama-foto" || mode === "nim-foto") {
             const img = document.createElement("img");
             img.src = item.value; // Path foto
-            img.alt = "Foto Teman"; // Alt text yang lebih umum
+            img.alt = "Foto Teman";
             img.onerror = function() {
-                // Jika gambar gagal dimuat, tampilkan placeholder
-                this.style.display = 'none'; // Sembunyikan img yang error
+                this.style.display = 'none';
                 const placeholder = document.createElement('div');
-                placeholder.classList.add('image-placeholder'); // Tambah class untuk styling
+                placeholder.classList.add('image-placeholder');
                 placeholder.innerText = 'Foto tidak tersedia';
                 this.parentNode.appendChild(placeholder);
-                console.error('Gagal memuat gambar:', this.src); // Log error ke console
+                console.error('Gagal memuat gambar:', this.src);
             };
             card.appendChild(img);
         } else if (mode === "nim-nama") {
-            card.innerText = item.value; // Nama teman untuk mode NIM-Nama
+            card.innerText = item.value;
         }
     }
 
     card.onclick = () => selectItem(card);
 
-    // Tentukan kolom berdasarkan type (left/right). Ini perlu diperbaiki jika Anda ingin acak sepenuhnya
-    // Jika Anda ingin elemen benar-benar acak di satu papan, maka tidak perlu kolom kiri/kanan terpisah.
-    // Namun, asumsi dari kode Anda sebelumnya adalah ada dua kolom yang terpisah.
-    // Jika 'type' item adalah 'left', tambahkan ke kolom kiri, jika 'right' ke kolom kanan.
-    // Ini mengasumsikan gameElements sudah diacak dan kemudian kita bagi lagi ke kolom.
-    // Jika ingin tampilan acak di seluruh papan tanpa kolom terpisah, cukup append ke board langsung.
-    // Untuk 'connecting two dots' umumnya ada dua 'titik' di dua kolom berbeda.
     if (item.type === 'left') {
         leftColumn.appendChild(card);
     } else {
@@ -601,19 +589,16 @@ function selectItem(element) {
     selectedItem2 = element;
     selectedItem2.classList.add('selected');
 
-    // Pastikan tidak memilih item dari kolom yang sama (jika game-nya two-column matching)
-    // Atau pastikan tidak memilih item dengan type yang sama (left vs right)
+    // Pastikan tidak memilih item dari kolom yang sama (misal, dua nama atau dua foto)
     if (selectedItem1.dataset.type === selectedItem2.dataset.type) {
-        // Jika keduanya dari kolom yang sama (atau tipe yang sama), reset pilihan
         setTimeout(() => {
             selectedItem1.classList.remove('selected');
             selectedItem2.classList.remove('selected');
             selectedItem1 = null;
             selectedItem2 = null;
-        }, 500); // Beri sedikit delay agar user melihat pilihan
+        }, 500);
         return;
     }
-
 
     // Cek kecocokan
     if (selectedItem1.dataset.nim === selectedItem2.dataset.nim) {
@@ -622,17 +607,17 @@ function selectItem(element) {
       selectedItem2.classList.add('matched');
       skor += 10; // Tambah skor
       document.getElementById("score").innerText = `Skor: ${skor}`;
-      matchedPairs.push(selectedItem1.dataset.nim); // Tambahkan NIM yang sudah cocok
+      matchedPairsCount++; // Increment counter pasangan yang cocok di ronde ini
 
       // Reset pilihan setelah kecocokan
       selectedItem1 = null;
       selectedItem2 = null;
 
-      // Cek apakah semua pasangan sudah ditemukan
-      if (matchedPairs.length === currentRoundData.length) {
+      // Cek apakah semua pasangan sudah ditemukan di ronde ini (4 pasangan karena 4 teman)
+      if (matchedPairsCount === currentRoundData.length) { // currentRoundData.length adalah 4
         setTimeout(() => {
-          alert(`Selamat! Anda telah menyelesaikan semua pasangan. Skor Anda: ${skor}`);
-          generateRound(); // Lanjut ke round berikutnya
+          alert(`Selamat! Anda telah menyelesaikan semua pasangan di ronde ini. Skor Anda: ${skor}`);
+          generateRound(); // Lanjut ke ronde berikutnya
         }, 500);
       }
 
@@ -651,16 +636,13 @@ function selectItem(element) {
   }
 }
 
-// Fungsi checkAnswers sudah tidak diperlukan dalam konsep matching langsung
-// Ini akan digantikan oleh logika di selectItem()
-
 function endGame() {
   alert("Permainan diakhiri. Skor akhir: " + skor);
   skor = 0;
-  matchedPairs = [];
+  matchedPairsCount = 0;
   currentRoundData = [];
   document.getElementById("game-board").innerHTML = "";
   document.getElementById("score").innerText = "Skor: 0";
-  document.getElementById("mode-selector").style.display = "block"; // Tampilkan kembali selector mode
-  document.getElementById("game-board").style.display = "none"; // Sembunyikan game board
+  document.getElementById("mode-selector").style.display = "block";
+  document.getElementById("game-board").style.display = "none";
 }
