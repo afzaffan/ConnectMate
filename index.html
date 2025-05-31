@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ConnectMate</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>ConnectMate</h1>
+  <div id="mode-selector">
+    <button onclick="startGame('nama-foto')">Nama - Foto</button>
+    <button onclick="startGame('nim-foto')">NIM - Foto</button>
+    <button onclick="startGame('nim-nama')">NIM - Nama</button>
+  </div>
+  <div id="score">Skor: 0</div>
+  <div id="game-board"></div>
+  <div id="controls">
+    <button onclick="checkAnswers()">Cek Jawaban</button>
+    <button onclick="endGame()">Akhiri Permainan</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
