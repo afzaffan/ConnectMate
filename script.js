@@ -3,452 +3,452 @@ let data = [
   {
     "nama":"Nina Aulia Angkasa",
     "nim":"G2-001",
-    "foto":"assets/foto-teman/G2-001 Nina.png" // PASTIKAN NAMA FOLDER 'assets' HURUF KECIL DI GITHUB
+    "foto":"Assets/foto-teman/G2-001 Nina.png" // PASTIKAN NAMA FOLDER 'assets' HURUF KECIL DI GITHUB
   },
   {
     "nama":"Daradina Ayu",
     "nim":"G2-002",
-    "foto":"assets/foto-teman/G2-002 Daradina.jpg"
+    "foto":"Assets/foto-teman/G2-002 Daradina.jpg"
   },
   {
     "nama":"Hafy Fatra Alfaid",
     "nim":"G2-003",
-    "foto":"assets/foto-teman/G2-003 Hafy.jpg"
+    "foto":"Assets/foto-teman/G2-003 Hafy.jpg"
   },
   {
     "nama":"Zaskia Anandina",
     "nim":"G2-004",
-    "foto":"assets/foto-teman/G2-004 Zaskia.jpg"
+    "foto":"Assets/foto-teman/G2-004 Zaskia.jpg"
   },
   {
     "nama":"Deni Wicaksono",
     "nim":"G2-005",
-    "foto":"assets/foto-teman/G2-005 Deni.jpg"
+    "foto":"Assets/foto-teman/G2-005 Deni.jpg"
   },
   {
     "nama":"Nailla Bilqis Ramadhani",
     "nim":"G2-006",
-    "foto":"assets/foto-teman/G2-006 Nailla.jpg"
+    "foto":"Assets/foto-teman/G2-006 Nailla.jpg"
   },
   {
     "nama":"Elzi Saputra",
     "nim":"G2-007",
-    "foto":"assets/foto-teman/G2-007 Elzi.jpg"
+    "foto":"Assets/foto-teman/G2-007 Elzi.jpg"
   },
   {
     "nama":"Jeneeke Asti Cicilia Utomo",
     "nim":"G2-008",
-    "foto":"assets/foto-teman/G2-008 Jeneeke.jpg"
+    "foto":"Assets/foto-teman/G2-008 Jeneeke.jpg"
   },
   {
     "nama":"Liza Novianti",
     "nim":"G2-009",
-    "foto":"assets/foto-teman/G2-009 Liza.jpg"
+    "foto":"Assets/foto-teman/G2-009 Liza.jpg"
   },
   {
     "nama":"Shirleen Islami Puji",
     "nim":"G2-010",
-    "foto":"assets/foto-teman/G2-010 Shirleen.jpg"
+    "foto":"Assets/foto-teman/G2-010 Shirleen.jpg"
   },
   {
     "nama":"Ekane Susiana",
     "nim":"G2-011",
-    "foto":"assets/foto-teman/G2-011 Ekane.jpg"
+    "foto":"Assets/foto-teman/G2-011 Ekane.jpg"
   },
   {
     "nama":"Nurul Wardah",
     "nim":"G2-012",
-    "foto":"assets/foto-teman/G2-012 Nurul.jpg"
+    "foto":"Assets/foto-teman/G2-012 Nurul.jpg"
   },
   {
     "nama":"Muhammad Ilham Aditama",
     "nim":"G2-013",
-    "foto":"assets/foto-teman/G2-013 Ilham.jpg"
+    "foto":"Assets/foto-teman/G2-013 Ilham.jpg"
   },
   {
     "nama":"Tiara Puspita",
     "nim":"G2-014",
-    "foto":"assets/foto-teman/G2-014 Tiara.jpg"
+    "foto":"Assets/foto-teman/G2-014 Tiara.jpg"
   },
   {
     "nama":"M. Firman Fahrudin",
     "nim":"G2-015",
-    "foto":"assets/foto-teman/G2-015 Firman.jpg"
+    "foto":"Assets/foto-teman/G2-015 Firman.jpg"
   },
   {
     "nama":"Kania Saskia Ginanti",
     "nim":"G2-016",
-    "foto":"assets/foto-teman/G2-016 Kania.jpg"
+    "foto":"Assets/foto-teman/G2-016 Kania.jpg"
   },
   {
     "nama":"Nadine Vidya Askia Hasibuan",
     "nim":"G2-017",
-    "foto":"assets/foto-teman/G2-017 Nadine.jpg"
+    "foto":"Assets/foto-teman/G2-017 Nadine.jpg"
   },
   {
     "nama":"Gusva Wellyanti",
     "nim":"G2-018",
-    "foto":"assets/foto-teman/G2-018 Gusva.jpg"
+    "foto":"Assets/foto-teman/G2-018 Gusva.jpg"
   },
   {
     "nama":"Luthficka Suci Finasty",
     "nim":"G2-019",
-    "foto":"assets/foto-teman/G2-019 Luthficka.jpg"
+    "foto":"Assets/foto-teman/G2-019 Luthficka.jpg"
   },
   {
     "nama":"Muhammad Habib Ismail Ilham",
     "nim":"G2-020",
-    "foto":"assets/foto-teman/G2-020 Habib.jpg"
+    "foto":"Assets/foto-teman/G2-020 Habib.jpg"
   },
   {
     "nama":"Hazriel Achmad Rayyan",
     "nim":"G2-021",
-    "foto":"assets/foto-teman/G2-021 Hazriel.jpg"
+    "foto":"Assets/foto-teman/G2-021 Hazriel.jpg"
   },
   {
     "nama":"Dian Putri Meilani",
     "nim":"G2-022",
-    "foto":"assets/foto-teman/G2-022 Dian.jpg"
+    "foto":"Assets/foto-teman/G2-022 Dian.jpg"
   },
   {
     "nama":"Dwi Ambarsari",
     "nim":"G2-023",
-    "foto":"assets/foto-teman/G2-023 Dwi.jpg"
+    "foto":"Assets/foto-teman/G2-023 Dwi.jpg"
   },
   {
     "nama":"Raudhah Fitria Gyasani",
     "nim":"G2-024",
-    "foto":"assets/foto-teman/G2-024 Raudhah.jpg"
+    "foto":"Assets/foto-teman/G2-024 Raudhah.jpg"
   },
   {
     "nama":"M. Fazza Ilham Ersafero",
     "nim":"G2-025",
-    "foto":"assets/foto-teman/G2-025 Fazza.jpg"
+    "foto":"Assets/foto-teman/G2-025 Fazza.jpg"
   },
   {
     "nama":"Nahar Latifah",
     "nim":"G2-026",
-    "foto":"assets/foto-teman/G2-026 Nahar.jpg"
+    "foto":"Assets/foto-teman/G2-026 Nahar.jpg"
   },
   {
     "nama":"Saptian Budi Satria",
     "nim":"G2-027",
-    "foto":"assets/foto-teman/G2-027 Saptian.jpg"
+    "foto":"Assets/foto-teman/G2-027 Saptian.jpg"
   },
   {
     "nama":"Moha Joulida Adyatma",
     "nim":"G2-028",
-    "foto":"assets/foto-teman/G2-028 Moha.jpg"
+    "foto":"Assets/foto-teman/G2-028 Moha.jpg"
   },
   {
     "nama":"Hanifah Quratu Aini Suwarno",
     "nim":"G2-029",
-    "foto":"assets/foto-teman/G2-029 Hanifah.jpg"
+    "foto":"Assets/foto-teman/G2-029 Hanifah.jpg"
   },
   {
     "nama":"Suci Feliandira",
     "nim":"G2-030",
-    "foto":"assets/foto-teman/G2-030 Suci.jpg"
+    "foto":"Assets/foto-teman/G2-030 Suci.jpg"
   },
   {
     "nama":"Fathiyyah Adriani",
     "nim":"G2-031",
-    "foto":"assets/foto-teman/G2-031 Fathiyyah.jpg"
+    "foto":"Assets/foto-teman/G2-031 Fathiyyah.jpg"
   },
   {
     "nama":"Rama Akbar Aditya Buwono",
     "nim":"G2-032",
-    "foto":"assets/foto-teman/G2-032 Rama.jpg"
+    "foto":"Assets/foto-teman/G2-032 Rama.jpg"
   },
   {
     "nama":"Arief Januar Saputra",
     "nim":"G2-033",
-    "foto":"assets/foto-teman/G2-033 Arief.jpg"
+    "foto":"Assets/foto-teman/G2-033 Arief.jpg"
   },
   {
     "nama":"Azizati Saniya Kanur",
     "nim":"G2-034",
-    "foto":"assets/foto-teman/G2-034 Azizati.jpg"
+    "foto":"Assets/foto-teman/G2-034 Azizati.jpg"
   },
   {
     "nama":"Khaerunisa Sinta Dewi",
     "nim":"G2-035",
-    "foto":"assets/foto-teman/G2-035 Sinta.jpg"
+    "foto":"Assets/foto-teman/G2-035 Sinta.jpg"
   },
   {
     "nama":"Ratu Salsabila Nurhasanah",
     "nim":"G2-036",
-    "foto":"assets/foto-teman/G2-036 Ratu.jpg"
+    "foto":"Assets/foto-teman/G2-036 Ratu.jpg"
   },
   {
     "nama":"Faizarantie Zahra Cania Wibowo",
     "nim":"G2-037",
-    "foto":"assets/foto-teman/G2-037 Faiza.jpg"
+    "foto":"Assets/foto-teman/G2-037 Faiza.jpg"
   },
   {
     "nama":"Naiya Shalsabila Putri",
     "nim":"G2-038",
-    "foto":"assets/foto-teman/G2-038 Naiya.jpg"
+    "foto":"Assets/foto-teman/G2-038 Naiya.jpg"
   },
   {
     "nama":"Keysha Shaqila Iqbal",
     "nim":"G2-039",
-    "foto":"assets/foto-teman/G2-039 Keysha.jpg"
+    "foto":"Assets/foto-teman/G2-039 Keysha.jpg"
   },
   {
     "nama":"Fakhriya Nadhifa",
     "nim":"G2-040",
-    "foto":"assets/foto-teman/G2-040 Nadhifa.jpg"
+    "foto":"Assets/foto-teman/G2-040 Nadhifa.jpg"
   },
   {
     "nama":"Rahma Sarlita",
     "nim":"G2-041",
-    "foto":"assets/foto-teman/G2-041 Rahma.jpg"
+    "foto":"Assets/foto-teman/G2-041 Rahma.jpg"
   },
   {
     "nama":"Galuh Febby Setyani",
     "nim":"G2-042",
-    "foto":"assets/foto-teman/G2-042 Febby.jpg"
+    "foto":"Assets/foto-teman/G2-042 Febby.jpg"
   },
   {
     "nama":"Thoriq Khairi Akbar",
     "nim":"G2-043",
-    "foto":"assets/foto-teman/G2-043 Thoriq.jpg"
+    "foto":"Assets/foto-teman/G2-043 Thoriq.jpg"
   },
   {
     "nama":"Diva Khaerunnisa",
     "nim":"G2-044",
-    "foto":"assets/foto-teman/G2-044 Diva.jpg"
+    "foto":"Assets/foto-teman/G2-044 Diva.jpg"
   },
   {
     "nama":"Raffi Syafa Yudistira B.",
     "nim":"G2-045",
-    "foto":"assets/foto-teman/G2-045 Raffi.jpg"
+    "foto":"Assets/foto-teman/G2-045 Raffi.jpg"
   },
   {
     "nama":"Daniel Destianto Nathan Immanuel",
     "nim":"G2-046",
-    "foto":"assets/foto-teman/G2-046 Daniel.jpg"
+    "foto":"Assets/foto-teman/G2-046 Daniel.jpg"
   },
   {
     "nama":"Fadhlurrahman Misbahuddien",
     "nim":"G2-047",
-    "foto":"assets/foto-teman/G2-047 Fadhlurrahman.jpg"
+    "foto":"Assets/foto-teman/G2-047 Fadhlurrahman.jpg"
   },
   {
     "nama":"M. Sajali Abrori Lubis",
     "nim":"G2-048",
-    "foto":"assets/foto-teman/G2-048 Abrori.jpg"
+    "foto":"Assets/foto-teman/G2-048 Abrori.jpg"
   },
   {
     "nama":"Celine Alecia Tanasha",
     "nim":"G2-049",
-    "foto":"assets/foto-teman/G2-049 Celine.jpg"
+    "foto":"Assets/foto-teman/G2-049 Celine.jpg"
   },
   {
     "nama":"Reiza Fitri Ananda",
     "nim":"G2-050",
-    "foto":"assets/foto-teman/G2-050 Reiza.jpg"
+    "foto":"Assets/foto-teman/G2-050 Reiza.jpg"
   },
   {
     "nama":"Ilham Nur Akbar",
     "nim":"G2-051",
-    "foto":"assets/foto-teman/G2-051 Ilham Nur.jpg"
+    "foto":"Assets/foto-teman/G2-051 Ilham Nur.jpg"
   },
   {
     "nama":"Buana Zaky Depasko",
     "nim":"G2-052",
-    "foto":"assets/foto-teman/G2-052 Buana.jpg"
+    "foto":"Assets/foto-teman/G2-052 Buana.jpg"
   },
   {
     "nama":"Areetha Alma Ginitri",
     "nim":"G2-053",
-    "foto":"assets/foto-teman/G2-053 Areetha.jpg"
+    "foto":"Assets/foto-teman/G2-053 Areetha.jpg"
   },
   {
     "nama":"Dini Nurhayati",
     "nim":"G2-054",
-    "foto":"assets/foto-teman/G2-054 Dini.jpg"
+    "foto":"Assets/foto-teman/G2-054 Dini.jpg"
   },
   {
     "nama":"Muhammad Dzaki Setyawan",
     "nim":"G2-055",
-    "foto":"assets/foto-teman/G2-055 Dzaki.jpg"
+    "foto":"Assets/foto-teman/G2-055 Dzaki.jpg"
   },
   {
     "nama":"Kayla Salsabila",
     "nim":"G2-056",
-    "foto":"assets/foto-teman/G2-056 Kayla.jpg"
+    "foto":"Assets/foto-teman/G2-056 Kayla.jpg"
   },
   {
     "nama":"Andi Lutfiah",
     "nim":"G2-057",
-    "foto":"assets/foto-teman/G2-057 Lutfiah.jpg"
+    "foto":"Assets/foto-teman/G2-057 Lutfiah.jpg"
   },
   {
     "nama":"Jimmy Syahran Ramadhan",
     "nim":"G2-058",
-    "foto":"assets/foto-teman/G2-058 Jimmy.jpg"
+    "foto":"Assets/foto-teman/G2-058 Jimmy.jpg"
   },
   {
     "nama":"Muhammad Hanif",
     "nim":"G2-059",
-    "foto":"assets/foto-teman/G2-059 Hanif.jpg"
+    "foto":"Assets/foto-teman/G2-059 Hanif.jpg"
   },
   {
     "nama":"Puput Dwiyanti Nurhayadi",
     "nim":"G2-060",
-    "foto":"assets/foto-teman/G2-060 Puput.jpg"
+    "foto":"Assets/foto-teman/G2-060 Puput.jpg"
   },
   {
     "nama":"Muhammad Rafi Razaan",
     "nim":"G2-061",
-    "foto":"assets/foto-teman/G2-061 Fizaan.jpg"
+    "foto":"Assets/foto-teman/G2-061 Fizaan.jpg"
   },
   {
     "nama":"Yafiq Kazim Rahbani",
     "nim":"G2-062",
-    "foto":"assets/foto-teman/G2-062 Yafiq.jpg"
+    "foto":"Assets/foto-teman/G2-062 Yafiq.jpg"
   },
   {
     "nama":"Kezia Regina",
     "nim":"G2-063",
-    "foto":"assets/foto-teman/G2-063 Kezia.jpg"
+    "foto":"Assets/foto-teman/G2-063 Kezia.jpg"
   },
   {
     "nama":"Ghaida Muthia",
     "nim":"G2-064",
-    "foto":"assets/foto-teman/G2-064 Muthia.jpg"
+    "foto":"Assets/foto-teman/G2-064 Muthia.jpg"
   },
   {
     "nama":"Najwa Salsabila",
     "nim":"G2-065",
-    "foto":"assets/foto-teman/G2-065 Najwa.jpg"
+    "foto":"Assets/foto-teman/G2-065 Najwa.jpg"
   },
   {
     "nama":"Fauzan Affan Zakiyya",
     "nim":"G2-067",
-    "foto":"assets/foto-teman/G2-067 Fauzan.jpg"
+    "foto":"Assets/foto-teman/G2-067 Fauzan.jpg"
   },
   {
     "nama":"Fawwaz Bintang Adhitama",
     "nim":"G2-068",
-    "foto":"assets/foto-teman/G2-068 Bintang.jpg"
+    "foto":"Assets/foto-teman/G2-068 Bintang.jpg"
   },
   {
     "nama":"Stevania Oktavia Ganadi",
     "nim":"G2-069",
-    "foto":"assets/foto-teman/G2-069 Stevania.jpg"
+    "foto":"Assets/foto-teman/G2-069 Stevania.jpg"
   },
   {
     "nama":"Arrafi Raditya Jatmiko",
     "nim":"G2-070",
-    "foto":"assets/foto-teman/G2-070 Arrafi.jpg"
+    "foto":"Assets/foto-teman/G2-070 Arrafi.jpg"
   },
   {
     "nama":"Giviorine Holly Idventha",
     "nim":"G2-071",
-    "foto":"assets/foto-teman/G2-071 Giviorine.jpg"
+    "foto":"Assets/foto-teman/G2-071 Giviorine.jpg"
   },
   {
     "nama":"Alisa Rabila Putri",
     "nim":"G2-072",
-    "foto":"assets/foto-teman/G2-072 Alisa.jpg"
+    "foto":"Assets/foto-teman/G2-072 Alisa.jpg"
   },
   {
     "nama":"Finky Intania",
     "nim":"G2-073",
-    "foto":"assets/foto-teman/G2-073 Finky.jpg"
+    "foto":"Assets/foto-teman/G2-073 Finky.jpg"
   },
   {
     "nama":"Annisa Eka Ardani",
     "nim":"G2-074",
-    "foto":"assets/foto-teman/G2-074 Annisa.jpg"
+    "foto":"Assets/foto-teman/G2-074 Annisa.jpg"
   },
   {
     "nama":"Puspita Devianti Sukma",
     "nim":"G2-075",
-    "foto":"assets/foto-teman/G2-075 Devi.jpg"
+    "foto":"Assets/foto-teman/G2-075 Devi.jpg"
   },
   {
     "nama":"Abidah Musthavia Khanun",
     "nim":"G2-076",
-    "foto":"assets/foto-teman/G2-076 Abidah.jpg"
+    "foto":"Assets/foto-teman/G2-076 Abidah.jpg"
   },
   {
     "nama":"I Gede Arya Pradnyana",
     "nim":"G2-077",
-    "foto":"assets/foto-teman/G2-077 Arya.jpg"
+    "foto":"Assets/foto-teman/G2-077 Arya.jpg"
   },
   {
     "nama":"Rafael Moza Christopher",
     "nim":"G2-078",
-    "foto":"assets/foto-teman/G2-078 Moza.jpg"
+    "foto":"Assets/foto-teman/G2-078 Moza.jpg"
   },
   {
     "nama":"Nabillah Afri Dwi Kinanti",
     "nim":"G2-079",
-    "foto":"assets/foto-teman/G2-079 Nabillah.jpg"
+    "foto":"Assets/foto-teman/G2-079 Nabillah.jpg"
   },
   {
     "nama":"Maiza Arnela",
     "nim":"G2-083",
-    "foto":"assets/foto-teman/G2-083 Maiza.jpg"
+    "foto":"Assets/foto-teman/G2-083 Maiza.jpg"
   },
   {
     "nama":"Yusuf Al-Qodri T.S.",
     "nim":"G2-089",
-    "foto":"assets/foto-teman/G2-089 Yusuf.jpg"
+    "foto":"Assets/foto-teman/G2-089 Yusuf.jpg"
   },
   {
     "nama":"Fatia Azarine Maharani",
     "nim":"G2-092",
-    "foto":"assets/foto-teman/G2-092 Fatia.jpg"
+    "foto":"Assets/foto-teman/G2-092 Fatia.jpg"
   },
   {
     "nama":"Muhammad Daffa Edgina Haldis",
     "nim":"G2-094",
-    "foto":"assets/foto-teman/G2-094 Daffa.jpg"
+    "foto":"Assets/foto-teman/G2-094 Daffa.jpg"
   },
   {
     "nama":"Fiena Rachmanda",
     "nim":"G2-095",
-    "foto":"assets/foto-teman/G2-095 Fiena.jpg"
+    "foto":"Assets/foto-teman/G2-095 Fiena.jpg"
   },
   {
     "nama":"Muhammad Ghazie Al Ghazalie",
     "nim":"G2-096",
-    "foto":"assets/foto-teman/G2-096 Ghazie.jpg"
+    "foto":"Assets/foto-teman/G2-096 Ghazie.jpg"
   },
   {
     "nama":"Muhammad Ghifari Nadeta Hidayat",
     "nim":"G2-099",
-    "foto":"assets/foto-teman/G2-099 Ghifari.jpg"
+    "foto":"Assets/foto-teman/G2-099 Ghifari.jpg"
   },
   {
     "nama":"Luthfiyah Nur Abidah",
     "nim":"G2-102",
-    "foto":"assets/foto-teman/G2-102 Luthfiyah.jpg"
+    "foto":"Assets/foto-teman/G2-102 Luthfiyah.jpg"
   },
   {
     "nama":"Sarah Febrina Chairunnisa",
     "nim":"G2-103",
-    "foto":"assets/foto-teman/G2-103 Sarah.jpg"
+    "foto":"Assets/foto-teman/G2-103 Sarah.jpg"
   },
   {
     "nama":"Debora Gadis Alexandria",
     "nim":"G2-105",
-    "foto":"assets/foto-teman/G2-105 Debora.jpg"
+    "foto":"Assets/foto-teman/G2-105 Debora.jpg"
   },
   {
     "nama":"Naisyilla Hasna Risnandar",
     "nim":"G2-111",
-    "foto":"assets/foto-teman/G2-111 Hasna.jpg"
+    "foto":"Assets/foto-teman/G2-111 Hasna.jpg"
   },
   {
     "nama":"Elvyanti Siburian",
     "nim":"G2-112",
-    "foto":"assets/foto-teman/G2-112 Evyanti.jpg"
+    "foto":"Assets/foto-teman/G2-112 Evyanti.jpg"
   }
 ];
 
