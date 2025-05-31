@@ -16,8 +16,16 @@
   <div id="score">Skor: 0</div>
   <div id="game-board"></div>
   <div id="controls">
+    <button onclick="showLeaderboard()">Lihat Leaderboard</button>
     <button onclick="endGame()">Akhiri Permainan</button>
   </div>
   <script src="script.js"></script>
+  <div id="leaderboard-modal" style="display: none;" class="modal">
+  <div class="modal-content">
+    <h2>🏆 Leaderboard</h2>
+    <ol id="leaderboard-list"></ol>
+    <button onclick="closeLeaderboard()">Tutup</button>
+  </div>
+</div>
 </body>
 </html>
