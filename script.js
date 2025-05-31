@@ -637,7 +637,11 @@ function selectItem(element) {
 }
 
 function endGame() {
-  alert("Permainan diakhiri. Skor akhir: " + skor);
+  const playerName = prompt("Permainan diakhiri.\nMasukkan nama Anda untuk disimpan ke leaderboard:");
+  if (playerName) {
+    saveToLeaderboard(playerName.trim(), skor);
+  }
+
   skor = 0;
   matchedPairsCount = 0;
   currentRoundData = [];
@@ -645,4 +649,40 @@ function endGame() {
   document.getElementById("score").innerText = "Skor: 0";
   document.getElementById("mode-selector").style.display = "block";
   document.getElementById("game-board").style.display = "none";
+}
+
+function saveToLeaderboard(name, score) {
+  let leaderboard = JSON.parse(localStorage.getItem('leaderboard')) || [];
+
+  // Hapus nama jika sudah ada sebelumnya
+  leaderboard = leaderboard.filter(entry => entry.name !== name);
+
+  // Masukkan data baru
+  leaderboard.push({ name, score });
+
+  // Urutkan dan simpan hanya top 10
+  leaderboard.sort((a, b) => b.score - a.score);
+  leaderboard = leaderboard.slice(0, 10);
+
+  localStorage.setItem('leaderboard', JSON.stringify(leaderboard));
+}
+
+function showLeaderboard() {
+  const leaderboard = JSON.parse(localStorage.getItem('leaderboard')) || [];
+  const list = document.getElementById("leaderboard-list");
+  list.innerHTML = "";
+
+  leaderboard.forEach(entry => {
+    const li = document.createElement("li");
+    li.textContent = `${entry.name} — ${entry.score} poin`;
+    list.appendChild(li);
+  });
+
+  document.getElementById("leaderboard-modal").style.display = "flex";
+}
+
+function closeLeaderboard() {
+  document.getElementById("leaderboard-modal").style.display = "none";
+}
+
 }
