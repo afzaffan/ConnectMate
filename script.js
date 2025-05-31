@@ -463,6 +463,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (data.length > 0) {
     document.getElementById("mode-selector").style.display = "block";
     document.getElementById("game-board").style.display = "none";
+    document.getElementById("controls").style.display = "none"; // Sembunyikan kontrol di awal
   }
 });
 
@@ -478,6 +479,7 @@ function startGame(selectedMode) {
   document.getElementById("score").innerText = "Skor: 0";
   document.getElementById("mode-selector").style.display = "none";
   document.getElementById("game-board").style.display = "flex";
+  document.getElementById("controls").style.display = "flex"; // Tampilkan kontrol setelah game dimulai
   generateRound();
 }
 
@@ -649,6 +651,7 @@ function endGame() {
   document.getElementById("score").innerText = "Skor: 0";
   document.getElementById("mode-selector").style.display = "block";
   document.getElementById("game-board").style.display = "none";
+  document.getElementById("controls").style.display = "none"; // Sembunyikan kontrol saat game berakhir
 }
 
 function saveToLeaderboard(name, score) {
@@ -678,11 +681,9 @@ function showLeaderboard() {
     list.appendChild(li);
   });
 
-  document.getElementById("leaderboard-modal").style.display = "flex";
+  document.getElementById("leaderboard-modal").classList.add("show"); // Gunakan class 'show'
 }
 
 function closeLeaderboard() {
-  document.getElementById("leaderboard-modal").style.display = "none";
-}
-
+  document.getElementById("leaderboard-modal").classList.remove("show"); // Hapus class 'show'
 }
